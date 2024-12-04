@@ -1,0 +1,41 @@
+# These are the types used to create the table in DuckDB
+- column: ResoTrigger
+  type: INTEGER
+- column: Time
+  type: FLOAT
+- column: Position
+  type: FLOAT
+- column: Lap
+  type: INTEGER
+- column: Velocity
+  type: FLOAT
+- column: Pump
+  type: FLOAT
+- column: optotrigger
+  type: FLOAT
+- column: Licks
+  type: INTEGER
+- column: Licking_MM
+  type: INTEGER
+- column: Position_binned
+  type: STRING
+- column: Position_binned_2cm
+  type: STRING
+- column: 1_cm_binned_position
+  type: INTEGER
+- column: 2_cm_binned_position
+  type: INTEGER
+- column: 5_cm_binned_position
+  type: INTEGER
+- column: Lap_2
+  type: INTEGER
+- column: "Stimulation condition"
+  type: STRING
+- column: Stimulation
+  type: BOOLEAN
+- column: "Zone ID"
+  type: INTEGER
+- column: file_name
+  type: STRING
+- column: neural_data
+  type: FLOAT[]

@@ -1,0 +1,46 @@
+
+version: 2
+
+models:
+  - name: main
+    description: "Prepares data for analysis"
+    columns:
+      - name: HASH
+        description: "Unique identifier for each row"
+        data_tests:
+          - unique
+          - not_null
+      - name: Time
+        description: "Around 11.5 minutes in total. In seconds."
+      - name: Position
+        description: "Around 3.6 meters along the x-axis. In centimeters. There is interpolation from 360 to 0."
+      - name: Lap
+        description: "The lap number. It loops around, incremented by one every time the animal passes the 360 cm mark."
+      - name: Velocity
+        description: "Velocity in centimeters per second."
+      - name: Pump
+        description: "Possibly interpolated. 0 = off, 1 = on. Might need a ceil to round up."
+      - name: optotrigger
+        description: "No reliable. It was reported that it was not recording the actual state of the pump. Also affected by interpolation."
+      - name: Licks
+        description: "Wether or not the animal licked the sensor. 0 = no, 1 = yes. Might need a ceil to round up."
+      - name: Licking_MM
+        description: "Not known."
+      - name: Position_binned
+        description: "1 centimeter binned position."
+      - name: Position_binned_2cm
+        description: "2 centimeters binned position."
+      - name: 1_cm_binned_position
+        description: "Integer mapping for Position_binned"
+      - name: 5_cm_binned_position
+        description: "Integer mapping for 5 centimeter binned position."
+      - name: Lap_2
+        description: "Cumulative version of Lap"
+      - name: "Stimulation condition"
+      - name: Stimulation
+      - name: "Zone ID"
+        description: "The belt is split into 6 zones. This is an ID indicator. Each zone is 6 centimeter long. The last zone contains the reward."
+      - name: file_name
+        description: "The name of the h5 file."
+      - name: neural_data
+        description: "Neural data vector."
