@@ -1,0 +1,55 @@
+
+version: 2
+
+models:
+  - name: silver__stg_0
+    description: "Prepares data for analysis"
+    columns:
+      - name: t
+        tests:
+          - not_null
+      - name: position
+        tests:
+          - not_null
+      - name: neural_data
+        tests:
+          - not_null
+      - name: lap
+        tests:
+          - not_null
+      - name: lap_cumulative
+        tests:
+          - not_null
+      - name: pump
+        tests:
+          - not_null
+      - name: file_name
+        tests:
+          - not_null
+  - name: silver__stg_1
+    description: "Prepares data for analysis"
+    columns:
+      - name: t
+        tests:
+          - not_null
+      - name: position
+        tests:
+          - not_null
+      - name: velocity
+        tests:
+          - not_null
+      - name: neural_data
+        tests:
+          - not_null
+      - name: lap
+        tests:
+          - not_null
+      - name: lap_cumulative
+        tests:
+          - not_null
+      - name: pump
+        tests:
+          - not_null
+      - name: file_name
+        tests:
+          - not_null

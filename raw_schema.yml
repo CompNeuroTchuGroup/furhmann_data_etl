@@ -1,0 +1,61 @@
+# These are the types used to create the table in DuckDB
+- column: ResoTrigger
+  type: INTEGER
+  description: Not reliable. It was reported that it was not recording the actual state of the pump. Also affected by interpolation.
+- column: Time
+  type: FLOAT
+  description: "Around 11.5 minutes in total. In seconds."
+- column: Position
+  type: FLOAT
+  description: "Around 3.6 meters along the x-axis. In centimeters. There is interpolation from 360 to 0."
+- column: Lap
+  type: INTEGER
+  description: "The lap number. It loops around, incremented by one every time the animal passes the 360 cm mark."
+- column: Velocity
+  type: FLOAT
+  description: "Velocity in centimeters per second."
+- column: Pump
+  type: FLOAT
+  description: "Possibly interpolated. 0 = off, 1 = on. Might need a ceil to round up."
+- column: optotrigger
+  type: FLOAT
+  description: "No reliable. It was reported that it was not recording the actual state of the pump. Also affected by interpolation."
+- column: Licks
+  type: INTEGER
+  description: "Wether or not the animal licked the sensor. 0 = no, 1 = yes. Might need a ceil to round up."
+- column: Licking_MM
+  type: INTEGER
+  description: "Not known."
+- column: Position_binned
+  type: STRING
+  description: "1 centimeter binned position."
+- column: Position_binned_2cm
+  type: STRING
+  description: "2 centimeters binned position."
+- column: 1_cm_binned_position
+  type: INTEGER
+  description: "Integer mapping for Position_binned"
+- column: 2_cm_binned_position
+  type: INTEGER
+  description: "Integer mapping for 2 centimeter binned position."
+- column: 5_cm_binned_position
+  type: INTEGER
+  description: "Integer mapping for 5 centimeter binned position."
+- column: Lap_2
+  type: INTEGER
+  description: "Cumulative version of Lap"
+- column: "Stimulation condition"
+  type: STRING
+  description: ""
+- column: Stimulation
+  type: BOOLEAN
+  description: ""
+- column: "Zone ID"
+  type: INTEGER
+  description: "The belt is split into 6 zones. This is an ID indicator. Each zone is 6 centimeter long. The last zone contains the reward."
+- column: file_name
+  type: STRING
+  description: "The name of the h5 file."
+- column: neural_data
+  type: FLOAT[]
+  description: "Neural data vector."
