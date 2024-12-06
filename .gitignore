@@ -182,3 +182,5 @@ profiles.yml
 TODO.md
 
 .vscode
+.ipython
+.npm
