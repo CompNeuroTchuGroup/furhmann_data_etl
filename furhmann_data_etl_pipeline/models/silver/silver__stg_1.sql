@@ -1,5 +1,5 @@
-with source as (select * from {{ref('silver__stg_0')}})
-with cte as (
+with source as (select * from {{ref('silver__stg_0')}}),
+cte as (
 select
     *,
     position - lag(position) over t_window as position_change,
