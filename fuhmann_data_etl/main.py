@@ -1,12 +1,7 @@
 #%%
-import dask.config
-import pandas as pd
 from dask.distributed import Client
-import dask.dataframe as dd
-from glob import glob
 import os
 from dotenv import load_dotenv
-from tqdm import tqdm
 import logging
 
 load_dotenv("../.env")
@@ -26,4 +21,3 @@ TARGET_PATH = os.environ["TARGET_PATH"]
 DASK_SCHEDULER_ADDRESS = os.environ["DASK_SCHEDULER_ADDRESS"]
 
 client = Client(DASK_SCHEDULER_ADDRESS)
-# %%
