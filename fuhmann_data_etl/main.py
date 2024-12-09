@@ -16,5 +16,4 @@ logger.addHandler(ch)
 logger.propagate = False
 
 INGEST_PATH = os.environ["INGEST_PATH"]
-TARGET_PATH = os.environ["TARGET_PATH"]
-DASK_SCHEDULER_ADDRESS = os.environ["DASK_SCHEDULER_ADDRESS"]
+PARQUET_PATH = os.environ["PARQUET_PATH"]
