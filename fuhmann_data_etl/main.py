@@ -1,5 +1,4 @@
 #%%
-from dask.distributed import Client
 import os
 from dotenv import load_dotenv
 import logging
@@ -19,5 +18,3 @@ logger.propagate = False
 INGEST_PATH = os.environ["INGEST_PATH"]
 TARGET_PATH = os.environ["TARGET_PATH"]
 DASK_SCHEDULER_ADDRESS = os.environ["DASK_SCHEDULER_ADDRESS"]
-
-client = Client(DASK_SCHEDULER_ADDRESS)
